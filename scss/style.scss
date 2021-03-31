@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  color: hsl(230, 29%, 20%);
+  // overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem;
+}
+
+.nav {
+  &__ul {
+    display: none;
+  }
+}
+
+.hero {
+  &__img-container {
+    overflow: hidden;
+  }
+  &__img {
+    width: 130%;
+  }
+
+  &__text {
+    padding: 2.5rem;
+  }
+}
+
+.new-dashboard {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  margin-bottom: 1rem;
+
+  &__new {
+    color: #fff;
+    background-color: hsl(230, 29%, 20%);
+    padding: 0.2rem 0.7rem;
+    border-radius: 20px;
+  }
+
+  &__dashboard {
+    color: hsl(231, 7%, 65%);
+    letter-spacing: 5px;
+    padding-left: 1rem;
+  }
+}
+
+.title {
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  color: hsl(230, 11%, 40%);
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  margin-top: 1.5rem;
+
+  &__btn {
+    color: hsl(207, 33%, 95%);
+    font-family: inherit;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: hsl(0, 100%, 68%);
+    border: none;
+    border-radius: 5px;
+    padding: 0.6rem 1.5rem;
+    letter-spacing: 2px;
+    font-size: 14px;
+  }
+
+  &__text {
+    color: hsl(231, 7%, 65%);
+    letter-spacing: 3px;
+    font-size: 14px;
+    padding-left: 1rem;
+  }
+}
