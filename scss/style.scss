@@ -8,14 +8,14 @@ body {
   font-family: "Barlow", sans-serif;
   font-size: 18px;
   color: hsl(230, 29%, 20%);
-  height: 100vh;
+  // height: 100vh;
 
   &::before {
     content: "";
     position: absolute;
     background-color: hsl(207, 33%, 95%);
     width: 50%;
-    height: 57%;
+    height: 55%;
     left: 50%;
     top: 0;
     border-bottom-left-radius: 90px;
@@ -23,16 +23,36 @@ body {
   }
 }
 
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem;
+  // padding: 2.5rem;
+
+  &__logo {
+    width: 20px;
+  }
 }
 
 .nav {
   &__ul {
     display: none;
+    position: absolute;
+    background: #fff;
+    margin: 2rem;
+    top: 4rem;
+    left: 0;
+    width: calc(100% - 4rem);
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0px 2px 14px 0px hsl(231, 7%, 65%);
   }
 
   &__li {
@@ -41,9 +61,23 @@ body {
     font-weight: 700;
     font-family: "Barlow Condensed", sans-serif;
     cursor: pointer;
+    padding: 1rem 0;
+    letter-spacing: 2px;
 
     &:last-child {
       color: hsl(231, 7%, 65%);
+      position: relative;
+      padding-top: 2rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: calc(100% - 4rem);
+        height: 1px;
+        left: 2rem;
+        top: 10%;
+        background: hsl(207, 33%, 95%);
+      }
     }
 
     &:hover {
@@ -52,16 +86,16 @@ body {
   }
 }
 
+.nav.show-menu {
+}
+
 .hero {
   &__img-container {
-    overflow: hidden;
+    overflow: visible;
+    margin: 4rem 0;
   }
   &__img {
-    width: 130%;
-  }
-
-  &__text {
-    padding: 2.5rem;
+    width: 150%;
   }
 }
 
@@ -91,15 +125,16 @@ body {
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
   margin-bottom: 1rem;
+  max-width: 300px;
 }
 
 .desc {
   color: hsl(230, 11%, 40%);
+  max-width: 270px;
 }
 
 .cta {
   display: flex;
-  justify-content: center;
   align-items: center;
   text-transform: uppercase;
   font-family: "Barlow Condensed", sans-serif;
@@ -114,7 +149,7 @@ body {
     border: none;
     outline: none;
     border-radius: 5px;
-    padding: 0.6rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     letter-spacing: 2px;
     font-size: 14px;
   }
@@ -144,7 +179,7 @@ body {
 
   .header {
     width: 100%;
-    padding: 0 0 10vw 0;
+    padding: 0 0 9vw 0;
   }
 
   .nav {
@@ -154,10 +189,34 @@ body {
 
     &__ul {
       display: flex;
+      background: none;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      position: relative;
+      top: 0;
+      width: auto;
     }
 
     &__li {
-      padding: 0 1rem;
+      padding: 0 1.3rem;
+      font-size: 1rem;
+
+      &:last-child {
+        padding-left: 7rem;
+        padding-top: 0;
+      }
+
+      &:last-child::before {
+        content: "";
+        position: absolute;
+        height: 6px;
+        width: 6px;
+        top: 30%;
+        left: 30%;
+        border-radius: 50%;
+        background-color: hsl(231, 7%, 65%);
+      }
     }
   }
 
@@ -168,11 +227,12 @@ body {
     align-items: center;
 
     &__img-container {
-      overflow: visible;
+      margin: 0;
     }
 
     &__img {
-      width: 160%;
+      width: 170%;
+      padding-left: 5rem;
     }
 
     &__text {
@@ -183,24 +243,31 @@ body {
   }
 
   .title {
-    font-size: 5rem;
+    font-size: 4rem;
+    margin-bottom: 0;
+    line-height: 1;
+    max-width: none;
   }
 
   .desc {
-    font-size: 1.5rem;
-    max-width: 400px;
-    padding: 1rem 0;
+    font-size: 1.1rem;
+    max-width: 300px;
+    padding: 2rem 0;
+    max-width: none;
   }
 
   .cta {
     justify-content: flex-start;
 
     &__btn {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      font-weight: 400;
     }
 
     &__text {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      letter-spacing: 4px;
+      font-family: "Barlow Condensed", sans-serif;
     }
   }
 }
