@@ -8,7 +8,6 @@ body {
   font-family: "Barlow", sans-serif;
   font-size: 18px;
   color: hsl(230, 29%, 20%);
-  // height: 100vh;
 
   &::before {
     content: "";
@@ -34,7 +33,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // padding: 2.5rem;
 
   &__logo {
     width: 20px;
@@ -43,7 +41,7 @@ body {
 
 .nav {
   &__ul {
-    display: none;
+    transform: translateY(-200%);
     position: absolute;
     background: #fff;
     margin: 2rem;
@@ -53,6 +51,7 @@ body {
     text-align: center;
     padding: 1rem 0;
     box-shadow: 0px 2px 14px 0px hsl(231, 7%, 65%);
+    transition: all 0.5s ease-in-out;
   }
 
   &__li {
@@ -86,13 +85,14 @@ body {
   }
 }
 
-.nav.show-menu {
+.nav__ul.show-menu {
+  transform: translateY(0);
 }
 
 .hero {
   &__img-container {
     overflow: visible;
-    margin: 4rem 0;
+    margin: 3rem 0;
   }
   &__img {
     width: 150%;
@@ -152,6 +152,12 @@ body {
     padding: 0.8rem 1.5rem;
     letter-spacing: 2px;
     font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      opacity: 80%;
+    }
   }
 
   &__text {
@@ -175,11 +181,16 @@ body {
     align-items: center;
     justify-content: center;
     padding: 5vw 10vw;
+    overflow: visible;
   }
 
   .header {
     width: 100%;
-    padding: 0 0 9vw 0;
+    padding: 0 0 6vw 0;
+
+    &__logo {
+      width: auto;
+    }
   }
 
   .nav {
@@ -194,13 +205,13 @@ body {
       padding: 0;
       box-shadow: none;
       position: relative;
-      top: 0;
+      top: 2rem;
       width: auto;
     }
 
     &__li {
       padding: 0 1.3rem;
-      font-size: 1rem;
+      font-size: 0.9rem;
 
       &:last-child {
         padding-left: 7rem;
@@ -213,7 +224,7 @@ body {
         height: 6px;
         width: 6px;
         top: 30%;
-        left: 30%;
+        left: 25%;
         border-radius: 50%;
         background-color: hsl(231, 7%, 65%);
       }
